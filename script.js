@@ -50,3 +50,15 @@ console.log("Updated Profile:", updatedProfile);
 const extracourses = ["CPAN 121 - Database Programming", "CPAN 144 - Advanced Front- End Programming" , "CPAN 112 - Fundamentals of Numeric Computing", "CPAN 131 - Object Oriented Programming", "GNED 101 - An Introduction to Arts and Sciences", "WRIT 220 - Technical Workplace Writing Skills"];
 const allcourses = [...studentProfile.courses, ...extracourses];
 console.log("All Courses", allcourses);
+
+// Part 5 Object Method 
+
+studentProfile.courses.push("CPAN 209: Systems Design");
+console.log("New Courses:", studentProfile.courses);
+
+const subjectCount = studentProfile.courses.length;
+console.log("Total Courses:", subjectCount);
+
+// Bonus
+const avgScore = testScores.reduce((sum, cur) => sum + cur, 0) / testScores.length;
+console.log("Average Score:", avgScore.toFixed(2));
