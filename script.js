@@ -23,14 +23,13 @@ console.log("Summary -", studentProfile.getSummary());
 
 //Part 2 Working with JSON
 
-
 const studentJSON = JSON.stringify(studentProfile);
 console.log("JSON String:", studentJSON);
 
 const BobProfile = JSON.parse(studentJSON);
 console.log("BobProfile:", BobProfile);
 
-console.log("Are these objects equal ?", BobProfile === studentProfile);
+console.log("Are the objects equal ?", BobProfile === studentProfile);
 console.log("Are they same structure ?", JSON.stringify(BobProfile) === JSON.stringify(studentProfile));
 
 //Part 3 Destructuring Assignment
@@ -40,7 +39,7 @@ console.log("Here is Misha's File:", fullName, courses);
 
 const testScores = [85, 92, 78, 90];
 const [first, second] = testScores;
-console.log("Top Scores Class Scores, Nice Job keep going", first, second);
+console.log("Top Scores for 2 Classes, Nice Job keep it going", first, second);
 
 // Part 4 Spread Operator
 
@@ -60,5 +59,6 @@ const subjectCount = studentProfile.courses.length;
 console.log("Total Courses:", subjectCount);
 
 // Bonus
+
 const avgScore = testScores.reduce((sum, cur) => sum + cur, 0) / testScores.length;
 console.log("Average Score:", avgScore.toFixed(2));
