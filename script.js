@@ -1,4 +1,5 @@
 // Part 1 Creating student properties
+
 const studentProfile = {
     fullName: "Misha Azaranka",
     age: 24,
@@ -40,3 +41,12 @@ console.log("Here is Misha's File:", fullName, courses);
 const testScores = [85, 92, 78, 90];
 const [first, second] = testScores;
 console.log("Top Scores Class Scores, Nice Job keep going", first, second);
+
+// Part 4 Spread Operator
+
+const updatedProfile = { ...studentProfile, graduationYear: 2027 };
+console.log("Updated Profile:", updatedProfile);
+
+const extracourses = ["CPAN 121 - Database Programming", "CPAN 144 - Advanced Front- End Programming" , "CPAN 112 - Fundamentals of Numeric Computing", "CPAN 131 - Object Oriented Programming", "GNED 101 - An Introduction to Arts and Sciences", "WRIT 220 - Technical Workplace Writing Skills"];
+const allcourses = [...studentProfile.courses, ...extracourses];
+console.log("All Courses", allcourses);
