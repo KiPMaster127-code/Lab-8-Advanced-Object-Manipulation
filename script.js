@@ -3,7 +3,7 @@ const studentProfile = {
     fullName: "Misha Azaranka",
     age: 24,
     isEnrolled: true,
-    subjects: [
+    courses: [
         "WRIT 120 - Technical Read and Writing Skills",
         "CPAN 113 - Fundamentals of JavaScript",
         "CPAN 111 - Database Concepts and Design",
@@ -12,11 +12,11 @@ const studentProfile = {
         "CPAN 134 - Web Programming and Design"
     ],
     getSummary() {
-        return `Student: ${this.fullName}, Age: ${this.age}, Enrolled: ${this.isEnrolled}, Subjects: ${this.subjects.join(", ")}`;
+        return `Student: ${this.fullName}, Age: ${this.age}, Enrolled: ${this.isEnrolled}, Courses: ${this.courses.join(", ")}`;
     }
 };
 
-console.log("Student Name -", studentProfile.fullName);
+console.log("Students Name -", studentProfile.fullName);
 console.log("Students Age -", studentProfile.age);
 console.log("Summary -", studentProfile.getSummary());
 
@@ -32,4 +32,11 @@ console.log("BobProfile:", BobProfile);
 console.log("Are these objects equal ?", BobProfile === studentProfile);
 console.log("Are they same structure ?", JSON.stringify(BobProfile) === JSON.stringify(studentProfile));
 
+//Part 3 Destructuring Assignment
 
+const { fullName, courses } = studentProfile;
+console.log("Here is Misha's File:", fullName, courses);
+
+const testScores = [85, 92, 78, 90];
+const [first, second] = testScores;
+console.log("Top Scores Class Scores, Nice Job keep going", first, second);
