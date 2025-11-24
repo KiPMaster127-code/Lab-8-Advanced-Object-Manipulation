@@ -15,3 +15,8 @@ const studentProfile = {
         return `Student: ${this.fullName}, Age: ${this.age}, Enrolled: ${this.isEnrolled}, Subjects: ${this.subjects.join(", ")}`;
     }
 };
+
+console.log("Student Name", studentProfile.fullName);
+console.log("Students Age", studentProfile.age);
+console.log("Summary", studentProfile.getSummary());
+
